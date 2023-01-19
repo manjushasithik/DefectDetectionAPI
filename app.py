@@ -10,7 +10,7 @@ from PIL import Image
 from flask_cors import CORS
 import numpy as np
 from base64 import b64encode
-import pythoncom
+#import pythoncom
 import itertools
 
 import base64
