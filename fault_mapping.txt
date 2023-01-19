@@ -1,0 +1,4 @@
+{"3"-C: '4',"12"-S: '3',"17"-LC: '5',"10"-O: '2', "11"-OB:'1'}
+        faultdict = {"3": '4',"12": '3',"17": '5',"10": '2', "11":'1'}
+
+selection_deposits--5-LC,selection_brekage--4--C,selection_surface--3--S,selection_lubrication--2--O,1--OB
