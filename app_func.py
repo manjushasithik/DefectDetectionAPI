@@ -10,7 +10,7 @@ from PIL import Image
 from flask_cors import CORS
 import numpy as np
 from base64 import b64encode
-import pythoncom
+#import pythoncom
 import itertools
 
 import base64
@@ -783,16 +783,16 @@ def predict(data_raw):
                 r = p.add_run()
                 r.add_picture(img_list[im_count-1],width=Inches(3))
     doc.save("files/report.docx")
-    # args = ["abiword", "--to", "report_output.pdf", "report.docx"  ]
-    # call(args )
-    pythoncom.CoInitialize()
-    convert("files/report.docx") 
+    args = ["abiword", "--to", "files/report_output.pdf", "report.docx"  ]
+    call(args )
+    #pythoncom.CoInitialize()
+    #convert("files/report.docx") 
 
     # return send_file("./report.pdf", as_attachment=True,mimetype='application/pdf')
     
     # with open("files/report.pdf", "rb") as pdf_file: 
     #     encoded_string = base64.b64encode(pdf_file.read()) 
-    data_pdf={'PDF':"http://localhost:8000/files/report.pdf"} 
+    data_pdf={'PDF':"https://defectdetectionapi.azurewebsites.net/files/report.pdf"} 
     # data_pdf['PDF']= [t.encode('utf-8') for t in title]
 
     for i,j in zip(data_keys,obj_lst): ##Final Object
