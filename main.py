@@ -12,6 +12,14 @@ from custom_data_type import Token, User, UserInput
 from app_func import predict
 
 import torch
+from subprocess import STDOUT, check_call , call
+check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+check_call(['apt-get', 'install', '-y', 'libgl1'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+check_call(['apt-get', 'install', '-y', 'libglib2.0-0'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+
+check_call([ 'apt-get', 'update','-y'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+check_call([ 'apt-get', 'install' ,'-y','abiword'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+#from w3lib.url import parse_data_uri
 
 app = FastAPI()
 app.mount("/files", StaticFiles(directory="files"), name="files")
