@@ -31,7 +31,7 @@ from app_func import *
 
 import os
 import json
-from docx2pdf import convert
+#from docx2pdf import convert
 from docx import Document # for pdf format
 from docx.shared import Pt # for pdf format
 from docx.shared import Inches
