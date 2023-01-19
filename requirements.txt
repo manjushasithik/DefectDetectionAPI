@@ -28,5 +28,5 @@ python-docx
 #docx2pdf
 #pywin32
 msoffice2pdf
-pypiwin32==223  #pdf depedancy 
+pypiwin32 #==223  #pdf depedancy 
 
