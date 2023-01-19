@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'DefectDetectionAPI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_29B8E87A01514E7E86B23D3E846C480A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_58448D19CB9C4F3F82A4674EEE64AD70 }}
