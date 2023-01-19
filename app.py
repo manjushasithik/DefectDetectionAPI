@@ -2,7 +2,7 @@
 Simple app to upload an image via a web form 
 and view the inference results on the image in the browser.
 """
-
+from subprocess import STDOUT, check_call , call
 
 check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 check_call(['apt-get', 'install', '-y', 'libgl1'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
@@ -33,7 +33,7 @@ import pandas as pd
 
 import openpyxl
 from flask import Flask, render_template, request, redirect,jsonify,send_file
-from subprocess import STDOUT, check_call , call
+
 #from w3lib.url import parse_data_uri
 
 from app_func import *
