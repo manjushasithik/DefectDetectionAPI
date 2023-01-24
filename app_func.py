@@ -7,7 +7,7 @@ import io
 import math
 import os
 from PIL import Image
-from flask_cors import CORS
+
 import numpy as np
 from base64 import b64encode
 #import pythoncom
@@ -23,7 +23,7 @@ from os import listdir
 import pandas as pd
 
 import openpyxl
-from flask import Flask, render_template, request, redirect,jsonify,send_file
+
 from subprocess import STDOUT, check_call , call
 #from w3lib.url import parse_data_uri
 
