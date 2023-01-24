@@ -41,6 +41,7 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def database_connect():
+    runandget()
     await database.connect()
 @app.on_event("shutdown")
 async def database_disconnect():
