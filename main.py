@@ -41,7 +41,7 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def database_connect():
-    runandget()
+    
     await database.connect()
 @app.on_event("shutdown")
 async def database_disconnect():
@@ -68,6 +68,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 @app.post("/predict")
 async def fetch_data(userinput: UserInput, current_user: User = Depends(get_current_active_user)):
     #print(userinput.dict())
+    runandget()
     pred = predict(userinput.dict())
     print(pred)
     return pred
