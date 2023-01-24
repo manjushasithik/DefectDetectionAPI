@@ -792,7 +792,7 @@ def predict(data_raw):
     
     # with open("files/report.pdf", "rb") as pdf_file: 
     #     encoded_string = base64.b64encode(pdf_file.read()) 
-    data_pdf={'PDF':"http://localhost:8000/files/report.pdf"} 
+    data_pdf={'PDF':"https://scavaivisionapi.azurewebsites.net/files/report.pdf"} 
     # data_pdf['PDF']= [t.encode('utf-8') for t in title]
 
     for i,j in zip(data_keys,obj_lst): ##Final Object
