@@ -3,11 +3,9 @@ uvicorn[standard]
 databases[aiosqlite]
 python-jose[cryptography]
 passlib[bcrypt]
-flask
 requests
 black
 ipython 
-flask-cors
 python-datauri
 matplotlib>=3.2.2
 numpy>=1.18.5
