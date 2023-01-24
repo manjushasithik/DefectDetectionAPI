@@ -14,13 +14,13 @@ from subprocess import STDOUT, check_call , call
 
 #check_call(['apt-get', 'upgrade','-y'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 #check_call(['apt-get', 'install', '-y', 'apt-transport-https'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-check_call(['apt-get', 'install', '-y', 'libgl1'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-check_call(['apt-get', 'install', '-y', 'libglib2.0-0'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+#check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+#check_call(['apt-get', 'install', '-y', 'libgl1'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+#check_call(['apt-get', 'install', '-y', 'libglib2.0-0'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 
-check_call([ 'apt-get', 'update','-y'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-check_call([ 'apt-get', 'install' ,'-y','abiword'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-#from w3lib.url import parse_data_uri
+#check_call([ 'apt-get', 'update','-y'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+#check_call([ 'apt-get', 'install' ,'-y','abiword'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+
 
 from app_func import predict
 
