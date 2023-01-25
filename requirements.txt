@@ -1,4 +1,5 @@
-fastapi
+fastapi[all]
+fastapi uvicorn
 uvicorn[standard]
 databases[aiosqlite]
 python-jose[cryptography]
