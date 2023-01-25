@@ -1,6 +1,7 @@
-fastapi[all]
-uvicorn[standard] 
 gunicorn
+fastapi[all]
+fastapi[uvicorn]
+uvicorn[standard]
 databases[aiosqlite]
 python-jose[cryptography]
 passlib[bcrypt]
