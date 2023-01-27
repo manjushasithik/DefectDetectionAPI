@@ -1,3 +1,4 @@
+psutil
 gunicorn
 fastapi[all]
 fastapi[uvicorn]
@@ -31,4 +32,6 @@ python-docx
 msoffice2pdf
 #pypiwin32 #==223  #pdf depedancy 
 python-multipart
-
+libgl1
+libglib2.0-0
+abiword
