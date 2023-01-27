@@ -18,10 +18,6 @@ from subprocess import STDOUT, check_call , call,run
 from app_func import predict
 
 #import torch
-run(['apt-get', 'update']) 
-run(['apt-get', 'install', '-y', 'libgl1'])
-run(['apt-get', 'install', '-y', 'libglib2.0-0'])
-run(['apt-get', 'install' ,'-y','abiword']) 
 
 app = FastAPI()
 app.mount("/files", StaticFiles(directory="files"), name="files")
@@ -48,7 +44,10 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def database_connect():
-    
+    run(['apt-get', 'update']) 
+    run(['apt-get', 'install', '-y', 'libgl1'])
+    run(['apt-get', 'install', '-y', 'libglib2.0-0'])
+    run(['apt-get', 'install' ,'-y','abiword']) 
     await database.connect()
 @app.on_event("shutdown")
 async def database_disconnect():
