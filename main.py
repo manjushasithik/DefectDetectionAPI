@@ -68,7 +68,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 @app.post("/predict")
 async def fetch_data(userinput: UserInput, current_user: User = Depends(get_current_active_user)):
     #print(userinput.dict())
-    runandget()
+    #runandget()
     pred = predict(userinput.dict())
     print(pred)
     return pred
