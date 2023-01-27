@@ -11,7 +11,7 @@ from database_conn import database
 from helper import authenticate_user, create_access_token, get_current_active_user
 from custom_data_type import Token, User, UserInput
 
-from subprocess import STDOUT, check_call , call
+from subprocess import STDOUT, check_call , call,run
 
 
 
@@ -23,13 +23,16 @@ app = FastAPI()
 app.mount("/files", StaticFiles(directory="files"), name="files")
 
 def runandget():
+    run(['apt-get', 'update']) 
+    run(['apt-get', 'install', '-y', 'libgl1'])
+    run(['apt-get', 'install', '-y', 'libglib2.0-0'])
+    run(['apt-get', 'install' ,'-y','abiword']) 
+   # check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+   # check_call(['apt-get', 'install', '-y', 'libgl1'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+    #check_call(['apt-get', 'install', '-y', 'libglib2.0-0'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 
-    check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-    check_call(['apt-get', 'install', '-y', 'libgl1'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-    check_call(['apt-get', 'install', '-y', 'libglib2.0-0'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-
-    check_call([ 'apt-get', 'update','-y'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-    check_call([ 'apt-get', 'install' ,'-y','abiword'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+   # check_call([ 'apt-get', 'update','-y'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+   # check_call([ 'apt-get', 'install' ,'-y','abiword'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
     
 app.add_middleware(
     CORSMiddleware,
@@ -68,7 +71,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 @app.post("/predict")
 async def fetch_data(userinput: UserInput, current_user: User = Depends(get_current_active_user)):
     #print(userinput.dict())
-    #runandget()
+    runandget()
     pred = predict(userinput.dict())
     print(pred)
     return pred
