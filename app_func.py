@@ -24,7 +24,7 @@ import pandas as pd
 
 import openpyxl
 
-from subprocess import STDOUT, check_call , call
+from subprocess import STDOUT, check_call , call,run
 #from w3lib.url import parse_data_uri
 
 from app_func import *
