@@ -784,8 +784,9 @@ def predict(data_raw):
                 r = p.add_run()
                 r.add_picture(img_list[im_count-1],width=Inches(3))
     doc.save("files/report.docx")
-    args = ["abiword", "--to", "files/report_output.pdf", "report.docx"  ]
-    call(args )
+    #args = ["abiword", "--to", "files/report_output.pdf", "report.docx"  ]
+    
+    run(['abiword', '--to=pdf', 'files/report.docx'])
     #pythoncom.CoInitialize()
     #convert("files/report.docx") 
 
